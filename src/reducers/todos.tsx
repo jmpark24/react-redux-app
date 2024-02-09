@@ -1,6 +1,6 @@
 enum ActionType {
-  ADD_TOTO = "ADD_TOTO",
-  DELETE_TODO = "DELETE_TOTO"
+  ADD_TODO = "ADD_TODO",
+  DELETE_TODO = "DELETE_TODO"
 };
 
 type Action = {
@@ -8,11 +8,9 @@ type Action = {
   text: string;
 }
 
-const ADD_TOTO = ActionType.ADD_TOTO;
-
 const todos = (state = [], action: Action) => {
   switch (action.type) {
-    case ADD_TOTO:
+    case "ADD_TODO":
       return [...state, action.text];
     default:
       return state;
